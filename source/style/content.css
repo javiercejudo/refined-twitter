@@ -14,11 +14,6 @@ body {
 	display: none !important;
 }
 
-/* Remove "Moments" tab */
-#global-actions .moments {
-	display: none !important;
-}
-
 /* Promote layers to fix repaints */
 #permalink-overlay,
 .RichEditor-tempTextArea {
@@ -60,8 +55,8 @@ Dashboard
 	display: none !important;
 }
 
-/* Remove the "Trends for you" box */
-.module.trends {
+/* Remove trends from dashboard only */
+.dashboard .module.trends {
 	display: none !important;
 }
 
@@ -75,9 +70,8 @@ Dashboard
 	display: none !important;
 }
 
-/* Remove sidebars */
+/* Remove right sidebar */
 /* The `:not(.wrapper-list)` part filters out Twitter lists because we don't want to hide the sidebars there */
-#page-container:not(.wrapper-list) .dashboard-left,
 #page-container:not(.wrapper-list) .dashboard-right {
 	display: none !important;
 }
@@ -122,6 +116,11 @@ Dashboard
 	.global-nav .container {
 		max-width: 590px !important;
 	}
+}
+
+/* Remove nav labels */
+.nav > li > a .text {
+	display: none;
 }
 
 /* Adjust pushstate spinner for the above nav max-width change */
@@ -216,4 +215,3 @@ code.refined-twitter_markdown {
 .refined-twitter_image-alt_ancestor-not-square {
 	max-height: initial !important;
 }
-
